@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/navbar";
-import Actions from "../components/actions";
-import Completed from "../components/completed";
-import Tabs from "../components/tabs";
-
+import Navbar from "./navbar";
+import Actions from "./actions";
+import Completed from "./completed";
+import Tabs from "./tabs";
 import testdata from "../data/test.json";
 import axios from "axios";
 
 const About = () => {
   const [data, setData] = useState(testdata.data);
   const [selectedTab, setSelectedTab] = useState(0);
+
   async function getActions() {
     try {
       const res = await axios.get(
@@ -18,6 +18,7 @@ const About = () => {
       setData(res);
     } catch (error) {}
   }
+
   useEffect(() => {
     getActions();
   }, []);

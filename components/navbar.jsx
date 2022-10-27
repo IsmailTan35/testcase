@@ -1,6 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { countDivider } from "../services";
 
-const navbar = () => {
+const Navbar = () => {
+  const points = useSelector(item => item.points.item);
   return (
     <div className="navbar-wrapper">
       <div className="navbar">
@@ -10,11 +13,11 @@ const navbar = () => {
         </div>
         <div className="navbar-point-wrapper">
           <div className="navbar-point-text">Points:</div>
-          <div className="navbar-point">29,850</div>
+          <div className="navbar-point">{countDivider(points)}</div>
         </div>
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;

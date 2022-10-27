@@ -6,12 +6,14 @@ import "../styles/completed.scss";
 import "../styles/tabs.scss";
 
 import Layout from "../components/layout";
-import Head from "next/head";
-
+import { Provider } from "react-redux";
+import store from "../store";
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </Layout>
   );
 }

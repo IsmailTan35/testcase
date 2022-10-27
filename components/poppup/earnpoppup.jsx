@@ -7,7 +7,7 @@ const EarnPoppup = props => {
       <div className="poppup-container">
         <div className="poppup-wrapper">
           <div>
-            <img src={data.image} />
+            <img src={data.image} alt={data.title} />
           </div>
           <div style={{ color: "#00CC00" }}>{data.point} Points</div>
           <div className="poppup-header">{data.title}</div>

@@ -1,19 +1,9 @@
-import Head from "next/head";
 import React from "react";
 
-const Intro = () => {
+const IntroPoppup = props => {
+  const { btnClick } = props;
   return (
-    <div className="intro-wrapper">
-      <div className="header-wrapper">
-        <div className="header">
-          <div>TextCase</div>
-          <div>APP</div>
-        </div>
-        <div className="subheader">Pixel Perfect</div>
-      </div>
-      <div className="icon-wrapper">
-        <img src="https://www.nicepng.com/png/full/870-8707419_755-x-680-11-web-design-website-clip.png" />
-      </div>
+    <div>
       <div className="poppup-wrapper">
         <div className="poppup-container">
           <div className="poppup-wrapper">
@@ -23,7 +13,14 @@ const Intro = () => {
               skills.
             </div>
             <div className="poppup-button-wrapper">
-              <div className="poppup-button">Start</div>
+              <div
+                className="poppup-button"
+                onClick={() => {
+                  btnClick();
+                }}
+              >
+                Start
+              </div>
             </div>
           </div>
         </div>
@@ -32,4 +29,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default IntroPoppup;
