@@ -1,7 +1,24 @@
 .navbar-wrapper {
-  height: 68px;
   background: #ffcc33;
-  padding: 10px;
+  padding: 16px;
+}
+
+.navbar-header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-header div:first-child {
+  font-weight: 700;
+}
+
+.navbar-header div:last-child {
+  font-weight: 900;
 }
 
 .navbar {
@@ -17,12 +34,24 @@
   color: white;
 
   padding: 8px 16px;
-  gap: 10px;
+  gap: 5px;
 
   border-radius: 99px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand";
   font-style: normal;
-  font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+.navbar-point-wrapper:hover {
+  transform: scale(1.1);
+}
+.navbar-point-text {
+  font-weight: 500;
+}
+
+.navbar-point {
+  font-weight: 700;
 }

@@ -8,17 +8,7 @@ const Completed = props => {
   const points = useSelector(item => item.tasks.items);
 
   return (
-    <div
-      style={{
-        background: "#F5F5F5",
-        flex: "1 1",
-        padding: "10px 0",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        overflow: "hidden",
-      }}
-    >
+    <div className="completed-items-container">
       <div className="completed-items-title">Completed actions</div>
       <div className="completed-items-wrapper">
         <div className="completed-items">

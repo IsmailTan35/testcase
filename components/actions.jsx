@@ -4,9 +4,11 @@ import { pointsActions, tasksActions } from "../store";
 import CongratulationsPoppup from "./poppup/congratulationspoppup";
 import EarnPoppup from "./poppup/earnpoppup";
 import { countDivider } from "../services";
+import Backdrop from "./backdrop";
 
 const Actions = props => {
   const { data } = props;
+
   const dispatch = useDispatch();
 
   const points = useSelector(item => item.tasks.items);
@@ -32,18 +34,8 @@ const Actions = props => {
 
   return (
     <>
-      <div
-        style={{
-          background: "#F5F5F5",
-          flex: "1 1",
-          padding: "10px 0",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          overflow: "hidden",
-          position: "relative",
-        }}
-      >
+      <div className="actions-container">
+        <div class="counter" data-from="0" data-to="100"></div>
         <div className="actions-title">Actions to be completed</div>
         <div className="actions-wrapper">
           <div className="actions">
@@ -80,8 +72,16 @@ const Actions = props => {
                 })}
           </div>
         </div>
-        {selected && <EarnPoppup data={selected} btnClick={handleEarnPoint} />}
-        {success && <CongratulationsPoppup btnClick={handleCong} />}
+        {selected || success ? (
+          <Backdrop>
+            {selected && (
+              <EarnPoppup data={selected} btnClick={handleEarnPoint} />
+            )}
+            {success && <CongratulationsPoppup btnClick={handleCong} />}
+          </Backdrop>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );

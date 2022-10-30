@@ -3,10 +3,10 @@ import React from "react";
 const IntroPoppup = props => {
   const { btnClick } = props;
   return (
-    <div>
+    <>
       <div className="poppup-wrapper">
         <div className="poppup-container">
-          <div className="poppup-wrapper">
+          <div className="poppup">
             <div className="poppup-header">Welcome to the TestCase APP!</div>
             <div className="poppup-content">
               We created this exercise to gain insights about your development
@@ -25,7 +25,7 @@ const IntroPoppup = props => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

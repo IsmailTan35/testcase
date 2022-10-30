@@ -2,32 +2,41 @@
   background: #f5f5f5;
   padding: 10px;
 }
+
 .tabs-container {
   padding: 10px;
   display: flex;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #ffcc33;
 }
 
 .tab {
-  font-family: "Quicksand", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 24px;
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 25px 2px 2px 2px;
   background: white;
-  cursor: pointer;
   transition: ease-in-out 0.4s;
+
+  cursor: pointer;
 }
 
 .tab.active {
-  background: rgba(0, 0, 0);
-  color: white;
+  background: #ffcc33;
+  color: black;
   z-index: 2;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
 }
+
 .tab:last-child {
   margin-left: -10px;
 }

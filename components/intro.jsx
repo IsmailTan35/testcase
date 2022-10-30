@@ -6,18 +6,15 @@ const Intro = props => {
 
   return (
     <div className="intro-wrapper">
-      <div className="header-wrapper">
-        <div className="header">
-          <div>TextCase</div>
+      <div className="intro-header-wrapper">
+        <div className="intro-header">
+          <div>TestCase</div>
           <div>APP</div>
         </div>
-        <div className="subheader">&quot;Perfect&quot;</div>
+        <div className="subheader">&quot;Pixel Perfect&quot;</div>
       </div>
       <div className="icon-wrapper">
-        <img
-          src="https://www.nicepng.com/png/full/870-8707419_755-x-680-11-web-design-website-clip.png"
-          alt="intro"
-        />
+        <div className="icon" />
       </div>
       <IntroPoppup btnClick={btnClick} />
     </div>

@@ -1,10 +1,24 @@
+.completed-items-container {
+  background: #f5f5f5;
+  flex: 1 1;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
 .completed-items-title {
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  width: 358px;
+  width: 100%;
+  max-width: 358px;
+  padding: 0 16px;
+  margin-bottom: 16px;
 }
 
 .completed-items-wrapper {
@@ -13,20 +27,31 @@
   overflow-y: scroll;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
+
+.completed-items-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .completed-items {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
+  width: 100%;
+  max-width: 358px;
 }
 
 .completed-item-wrapper {
   padding: 16px 24px;
-  width: 358px;
-  height: 52px;
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
   cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.completed-item-wrapper:hover {
+  transform: scale(1.1);
 }
 
 .completed-item {

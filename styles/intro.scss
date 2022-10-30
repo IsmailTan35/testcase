@@ -1,20 +1,19 @@
-.header-wrapper {
+.intro-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 21px 16px 15px 16px;
+}
+
+.intro-header-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.intro-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 21px;
-}
-
-.header {
-  font-family: "Montserrat", sans-serif;
+.intro-header {
+  font-family: "Montserrat";
   font-style: normal;
   font-size: 32px;
   line-height: 39px;
@@ -22,15 +21,16 @@
   gap: 10px;
 }
 
-.header div:first-child {
-  font-weight: 500;
-}
-.header div:last-child {
+.intro-header div:first-child {
   font-weight: 700;
 }
 
+.intro-header div:last-child {
+  font-weight: 900;
+}
+
 .subheader {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -38,78 +38,15 @@
 }
 
 .icon-wrapper {
-  flex: 1 1;
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 100%;
-    height: auto;
-    max-width: fit-content;
-  }
+  padding: 29px;
 }
 
-.poppup-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-.poppup-container {
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 16px;
-  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
-  border-radius: 16px;
-  max-width: max-content;
-}
-
-.poppup-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.poppup-header {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-}
-
-.poppup-content {
-  font-family: "Quicksand", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-}
-
-.poppup-button-wrapper {
-  width: 100%;
-  cursor: pointer;
-}
-.poppup-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 7px 16px;
-  background: #000000;
-  border-radius: 99px;
-  color: white;
-  height: 56px;
-  width: 100%;
-
-  font-family: "Quicksand", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
+.icon {
+  flex: 1;
+  background-image: url("https://www.nicepng.com/png/full/870-8707419_755-x-680-11-web-design-website-clip.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }

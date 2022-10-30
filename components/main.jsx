@@ -7,7 +7,10 @@ import testdata from "../data/test.json";
 import axios from "axios";
 
 const About = () => {
-  const [data, setData] = useState(testdata.data);
+  const [data, setData] = useState(
+    process.env.NODE_ENV === "development" ? testdata.data : []
+  );
+  // localde cors hatasından dolayı boyle yapmak zorunda kaldım.
   const [selectedTab, setSelectedTab] = useState(0);
 
   async function getActions() {
@@ -19,21 +22,18 @@ const About = () => {
     } catch (error) {}
   }
 
+  const handleChange = tabID => {
+    setSelectedTab(tabID);
+  };
+
   useEffect(() => {
     getActions();
   }, []);
 
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div className="layout-container">
       <Navbar />
-      <Tabs onChange={setSelectedTab} selectedTab={selectedTab} />
+      <Tabs onChange={handleChange} selectedTab={selectedTab} />
       {selectedTab === 0 ? <Actions data={data} /> : <Completed data={data} />}
     </div>
   );
