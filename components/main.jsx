@@ -7,9 +7,7 @@ import testdata from "../data/test.json";
 import axios from "axios";
 
 const About = () => {
-  const [data, setData] = useState(
-    process.env.NODE_ENV === "development" ? testdata.data : []
-  );
+  const [data, setData] = useState(testdata.data);
   // localde cors hatasından dolayı boyle yapmak zorunda kaldım.
   const [selectedTab, setSelectedTab] = useState(0);
 
